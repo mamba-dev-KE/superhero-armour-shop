@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/query';
 import productsReducer from '../features/products/productsSlice';
 import { armourAPI } from '../features/api/apiSlice';
-import { setupListeners } from '@reduxjs/toolkit/query';
 
 const store = configureStore({
   reducer: {

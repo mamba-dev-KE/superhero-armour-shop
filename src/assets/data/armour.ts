@@ -1,33 +1,39 @@
-import { StaticImageData } from 'next/image';
-import batmanArmour1 from '../images/armour-1.jpeg';
-import batmanArmour2 from '../images/armour-2.jpeg';
-
 const armour = [
   {
     id: '1',
     title: 'Batman Armour 1',
     superhero: 'batman',
-    image: batmanArmour1,
-    price: '10000',
+    image: '/images/armourOne.jpeg',
+    price: '15000',
     amount: 10,
   },
   {
     id: '2',
     title: 'Batman Armour 2',
     superhero: 'batman',
-    image: batmanArmour2,
+    image: '/images/armourTwo.jpeg',
+    price: '12000',
+    amount: 5,
+  },
+  {
+    id: '3',
+    title: 'Batman Armour 2',
+    superhero: 'batman',
+    image: '/images/armourThree.jpeg',
     price: '10000',
-    amount: 10,
+    amount: 7,
   },
 ];
 
-export default armour;
-export type Armour = typeof armour;
 export type ArmourItem = {
   id: string;
   title: string;
   superhero: string;
-  image: StaticImageData;
+  image: string;
   price: string;
   amount: number;
 };
+export type Armour = {
+  armour: ArmourItem[];
+};
+export default armour;
