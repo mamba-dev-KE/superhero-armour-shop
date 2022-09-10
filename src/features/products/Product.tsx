@@ -1,17 +1,22 @@
 import Image from 'next/image';
 import type { ArmourItem } from '../../assets/data/armour';
 
-const Product = ({ title, image }: ArmourItem) => {
+const Product = ({ title, image, price, amount }: ArmourItem) => {
   return (
     <article>
-      <h4>{title}</h4>
       <Image
         src={image}
         alt={title}
-        width={300}
-        height={400}
-        style={{ objectFit: 'cover' }}
+        width={350}
+        height={500}
+        objectFit="cover"
+        draggable="false"
       />
+      <div className="p-6 bg-black bg-opacity-20 filter blur-sm">
+        <h4>{title}</h4>
+        <p>Price: ${price}</p>
+        <p>Stock: {amount} in stock</p>
+      </div>
     </article>
   );
 };

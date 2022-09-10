@@ -1,9 +1,7 @@
 import { useGetProductsQuery } from '../api/apiSlice';
 import Product from './Product';
 
-interface ProductsList {}
-
-export const ProductsList = ({}) => {
+const ProductsList = () => {
   const {
     data: products,
     isError,
@@ -11,14 +9,18 @@ export const ProductsList = ({}) => {
     error,
   } = useGetProductsQuery(null);
 
+  const featured = products?.armour.filter(
+    (product) => product.featured === true
+  );
+
+  if (isLoading) return <p>Loading...</p>;
+  if (isError) return JSON.stringify(error);
+
   return (
-    <div className="text-white">
-      {isLoading && <p>Loading...</p>}
-      {products &&
-        products.armour.map((product) => (
-          <Product key={product.id} {...product} />
-        ))}
-      {isError && JSON.stringify(error)}
+    <div className="max-w-[120rem] mx-auto flex flex-wrap gap-7 text-white">
+      {products?.armour.map((product) => (
+        <Product key={product.id} {...product} />
+      ))}
     </div>
   );
 };

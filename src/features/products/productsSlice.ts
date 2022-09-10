@@ -4,14 +4,10 @@ import type { ArmourItem } from '../../assets/data/armour';
 
 interface ProductState {
   products: ArmourItem[];
-  isLoading: boolean;
-  isError: boolean;
 }
 
 const initialState: ProductState = {
   products: [],
-  isLoading: false,
-  isError: false,
 };
 
 const productsSlice = createSlice({
