@@ -1,6 +1,6 @@
 import batmanArmour1 from '../images/armour-1.jpeg';
 
-const products = [
+const armour = [
   {
     id: 1,
     superhero: 'batman',
@@ -9,5 +9,5 @@ const products = [
   },
 ];
 
-export default products;
-export type Products = typeof products;
+export default armour;
+export type Armour = typeof armour;
