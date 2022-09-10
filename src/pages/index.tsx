@@ -1,15 +1,11 @@
 import type { NextPage } from 'next';
 import { NavBar } from '../components/NavBar/NavBar';
-import { useEffect } from 'react';
-import { useAppDispatch } from '../app/hook';
-import { fetchProducts } from '../features/products/productsSlice';
+import { useGetProductsQuery } from '../features/api/apiSlice';
 
 const Home: NextPage = () => {
-  const dispatch = useAppDispatch();
+  const { data: products, error, isLoading } = useGetProductsQuery(null);
 
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, []);
+  console.log(error);
 
   return (
     <main className="bg-slate-900 min-h-screen">
