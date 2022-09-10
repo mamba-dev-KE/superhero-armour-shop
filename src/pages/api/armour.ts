@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import armour from '../../src/assets/data/armour';
-import type { Products } from '../../src/assets/data/armour';
+import armour from '../../assets/data/armour';
+import type { Armour } from '../../assets/data/armour';
 
 type Data = {
-  armour: Products;
+  armour: Armour;
 };
 
 const product = (req: NextApiRequest, res: NextApiResponse<Data>) => {
