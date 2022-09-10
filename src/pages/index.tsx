@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { NavBar } from '../components/NavBar/NavBar';
-import { ProductsList } from '../features/products/ProductsList';
+import ProductsList from '../features/products/ProductsList';
 
 const Home: NextPage = () => {
   return (
