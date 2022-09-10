@@ -3,9 +3,9 @@ import { NavBar } from '../src/components/NavBar/NavBar';
 
 const Home: NextPage = () => {
   return (
-    <div className="home">
+    <main className="bg-slate-900 min-h-screen">
       <NavBar />
-    </div>
+    </main>
   );
 };
 
