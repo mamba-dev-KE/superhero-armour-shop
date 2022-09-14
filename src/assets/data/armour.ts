@@ -1,6 +1,5 @@
-import { StaticImageData } from 'next/image';
 
-const armour = [
+export const armour = [
   {
     id: '1',
     title: 'Batman Armour 1',
@@ -129,7 +128,8 @@ export type ArmourItem = {
   amount: number;
   featured: boolean;
 };
+
 export type Armour = {
   armour: ArmourItem[];
 };
-export default armour;
+

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { ArmourItem } from '../../assets/data/armour';
-import armour from '../../assets/data/armour';
+import { armour } from '../../assets/data/armour';
 
 type Data = {
   armour: ArmourItem[];
