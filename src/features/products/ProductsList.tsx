@@ -2,12 +2,7 @@ import { useGetProductsQuery } from '../api/apiSlice';
 import Product from './Product';
 
 const ProductsList = () => {
-  const {
-    data: products,
-
-    isLoading,
-    error,
-  } = useGetProductsQuery(null);
+  const { data: products, isLoading, error } = useGetProductsQuery(null);
 
   const featured = products?.armour.filter(
     (product) => product.featured === true
@@ -19,7 +14,11 @@ const ProductsList = () => {
     if ('status' in error) {
       const errMessage =
         'error' in error ? error.error : JSON.stringify(error.data);
-      return <p>{errMessage}</p>;
+      return (
+        <p className="lowercase text-red-500 text-center mt-20">
+          {errMessage.split(':')[1]}
+        </p>
+      );
     }
     return <p>{error.message}</p>;
   }

@@ -124,7 +124,7 @@ export type ArmourItem = {
   id: string;
   title: string;
   superhero: string;
-  image: StaticImageData;
+  image: string;
   price: string;
   amount: number;
   featured: boolean;
