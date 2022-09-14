@@ -3,7 +3,7 @@ import { Armour } from '../../assets/data/armour';
 
 export const armourAPI = createApi({
   reducerPath: 'armourAPI',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3002' }),
   endpoints: (builder) => ({
     getProducts: builder.query<Armour, null>({
       query: () => '/api/armour',
