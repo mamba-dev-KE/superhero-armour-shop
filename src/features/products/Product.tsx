@@ -12,7 +12,7 @@ const Product = ({ title, image, price, amount }: ArmourItem) => {
         objectFit="cover"
         draggable="false"
       />
-      <div className="p-6 bg-black bg-opacity-20 filter blur-sm">
+      <div className="p-6 bg-black">
         <h4>{title}</h4>
         <p>Price: ${price}</p>
         <p>Stock: {amount} in stock</p>
